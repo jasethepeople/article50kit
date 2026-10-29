@@ -1,0 +1,21 @@
+{
+  "name": "@article50kit/react",
+  "version": "0.1.0",
+  "description": "Accessible React disclosure component for Article50Kit.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "scripts": {
+    "build": "bun build src/index.tsx --outdir dist --target browser --format esm --external react && tsc --declaration --emitDeclarationOnly --skipLibCheck --jsx react-jsx --target ES2022 --module ESNext --moduleResolution Bundler --lib ES2022,DOM --outDir dist src/index.tsx"
+  }
+}

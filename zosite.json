@@ -1,0 +1,15 @@
+{
+  "name": "article50kit",
+  "local_port": 56210,
+  "entrypoint": "bun run dev",
+  "publish": {
+    "label": "article50kit",
+    "type": "http",
+    "entrypoint": "bun run prod",
+    "published_port": 58391,
+    "env": {
+      "NODE_ENV": "production",
+      "ZO_CLIENT_IDENTITY_TOKEN": "none"
+    }
+  }
+}
